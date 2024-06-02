@@ -1,0 +1,42 @@
+The main differences between PATCH and PUT methods in HTTP are:
+
+Purpose:
+
+PATCH: The PATCH method is used to apply partial modifications to a resource.
+ It is typically used when you want to update only specific fields of a resource,
+  rather than replacing the entire resource.
+PUT: The PUT method is used to replace the entire resource at the specified URL with the new 
+representation provided in the request.
+
+Idempotency:
+
+PATCH: PATCH requests are not necessarily idempotent, 
+meaning that multiple identical PATCH requests might have different effects.
+
+PUT: PUT requests are idempotent, meaning that multiple identical PUT requests will have 
+the same effect as a single request.
+  This is because the entire resource is replaced with the new representation,
+   so subsequent requests will not change the result.
+
+Usage:
+
+PATCH: PATCH is commonly used when you want to make partial updates to a resource,
+ such as updating specific fields of an object or document.
+
+PUT: PUT is used when you want to completely replace an existing resource with a new 
+representation, typically used for updating or creating resources.
+
+Safety:
+
+PATCH: PATCH requests are considered safe, 
+meaning they should not have side effects on the resource.
+
+PUT: PUT requests are not necessarily safe, as they can result in the complete replacement
+ of the resource.
+
+
+
+In summary, PATCH is used for partial updates, 
+while PUT is used for complete replacements of resources.
+PATCH is preferred when you want to update specific fields of a resource, 
+while PUT is used when you want to replace the entire resource.
